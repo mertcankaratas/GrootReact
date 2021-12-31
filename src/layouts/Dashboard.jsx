@@ -11,11 +11,13 @@ import {
 } from 'react-router-dom';
 import ProductDetail from '../pages/ProductDetail';
 import CartDetail from '../pages/CartDetail';
+import { ToastContainer } from 'react-toastify';
 
 
 export default function Dashboard() {
     return (
         <div>
+            <ToastContainer position='bottom-right'/>
             <Grid>
                 <GridRow>
                     <GridColumn width={4}>
