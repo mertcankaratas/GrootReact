@@ -12,6 +12,9 @@ import {
 import ProductDetail from '../pages/ProductDetail';
 import CartDetail from '../pages/CartDetail';
 import { ToastContainer } from 'react-toastify';
+import ProductAdd from '../pages/ProductAdd';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
 
 
 export default function Dashboard() {
@@ -20,11 +23,11 @@ export default function Dashboard() {
             <ToastContainer position='bottom-right'/>
             <Grid>
                 <GridRow>
-                    <GridColumn width={4}>
-                        <Categories />
-                    </GridColumn>
+                   
+                      {/* <Categories /> */}
+                   
 
-                    <GridColumn width={12}>
+                    <GridColumn width={16}>
 
                         <Routes>
                             <Route exact path='/' element={< ProductList />}></Route>
@@ -32,6 +35,9 @@ export default function Dashboard() {
                             <Route exact path='/products' element={< ProductList />}></Route>
                             <Route exact path='/products/:id' element={< ProductDetail />}></Route>
                             <Route exact path='/cart' element={< CartDetail />}></Route>
+                            <Route exact path='/product/add' element={< ProductAdd />}></Route>
+                            <Route exact path='/login' element={< Login />}></Route>
+                            <Route exact path='/register' element={< Register/>}></Route>
 
                         </Routes>
 
